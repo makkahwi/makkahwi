@@ -5,7 +5,7 @@
 This is Suhaib Ahmad, Jordan's lead [github public contributor](https://commits.top/jordan_public.html)
 
   <a href="https://buymeacoffee.com/makkahwi" target="_blank">
-  I'm not a coffee drinker, I'm more into tea. But if you're buying I'll drink 
+  I'm more into tea, but if you're buying coffee, I'll drink 
     <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" align="center"/>
   </a>
 
