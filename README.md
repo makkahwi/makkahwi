@@ -38,16 +38,24 @@ This is Suhaib Ahmad, Jordan's lead [github public contributor](https://commits.
 
 ### 📫 Reach me through...
 <p>
-  <a href="https://www.linkedin.com/in/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/128403/linkedin.svg" height="30" width="40" />
-  </a>
-  
   <a href="https://suhaib.dev" target="_blank" style="padding: 0 15px;">
     <img align="center" src="https://www.svgrepo.com/show/81531/website.svg" height="30" width="40" />
   </a>
   
   <a href="mailto:SuhaibAhmadAi@hotmail.com" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/49695/mail.svg" height="30" width="40" />
+    <img align="center" src="https://www.svgrepo.com/show/32285/email.svg" height="30" width="40" />
+  </a>
+  
+  <a href="https://www.linkedin.com/in/makkahwi" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/157006/linkedin.svg" height="30" width="40" />
+  </a>
+  
+  <a href="https://facebook.com/makkahwi" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/111203/facebook.svg" height="30" width="40" />
+  </a>
+  
+  <a href="https://instagram.com/makkahwi" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/111199/instagram.svg" height="30" width="40" />
   </a>
   
   <a href="https://wasap.my/601128094804" target="_blank" style="padding: 0 15px;">
@@ -55,7 +63,19 @@ This is Suhaib Ahmad, Jordan's lead [github public contributor](https://commits.
   </a>
   
   <a href="https://t.me/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/394493/telegram.svg" height="30" width="40" />
+    <img align="center" src="https://www.svgrepo.com/show/354443/telegram.svg" height="30" width="40" />
+  </a>
+  
+  <a href="tel:+962788424973" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/51247/phone.svg" height="30" width="40" />
+  </a>
+  
+  <a href="https://discordapp.com/users/772634530992619530" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/343548/discord-communication-interaction-message-network.svg" height="30" width="40" />
+  </a>
+  
+  <a href="https://slack.com/app_redirect?channel=U02TS20JT8X" target="_blank" style="padding: 0 15px;">
+    <img align="center" src="https://www.svgrepo.com/show/355247/slack.svg" height="30" width="40" />
   </a>
 </p>
   
