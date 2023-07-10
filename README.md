@@ -2,7 +2,7 @@
 
 <!-- ### 🔭 I work with... -->
 
-This is Suhaib Ahmad, Jordan's lead [github public contributor](https://commits.top/jordan_public.html)
+This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
   <a href="https://buymeacoffee.com/makkahwi" target="_blank">
   I'm more into tea, but if you're buying coffee, I'll drink 
