@@ -41,44 +41,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 ![Css3](https://img.shields.io/badge/CSS%203-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
 ![BootStrap](https://img.shields.io/badge/BootStrap-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white)
 
-### 📫 Reach me through...
-<p>
-  <a href="https://suhaib.dev" target="blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/81531/website.svg" height="30" width="40" />
-  </a>
-  
-  <a href="mailto:SuhaibAhmadAi@hotmail.com" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/32285/email.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://www.linkedin.com/in/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/157006/linkedin.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://facebook.com/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/111203/facebook.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://instagram.com/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/111199/instagram.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://wasap.my/962788424973" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/158412/whatsapp.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://t.me/makkahwi" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/354443/telegram.svg" height="30" width="40" />
-  </a>
-  
-  <a href="tel:+962788424973" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/51247/phone.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://discordapp.com/users/772634530992619530" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/343548/discord-communication-interaction-message-network.svg" height="30" width="40" />
-  </a>
-</p>
+### 📫 Reach me through the contacts on the sidebar
   
 <!--
 **makkahwi/makkahwi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
