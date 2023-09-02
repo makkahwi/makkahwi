@@ -13,8 +13,8 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
 #### Most Used Stack
 ![React.Js](https://img.shields.io/badge/React.Js-%230db7ed.svg?&style=for-the-badge&logo=react&logoColor=white)
-![Node.JS](https://img.shields.io/badge/Node.JS%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
-![Express.Js](https://img.shields.io/badge/Express.Js%20-%23404d59.svg?&style=for-the-badge&logo=express&logoColor=white)
+![Node.JS](https://img.shields.io/badge/Node.JS-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
+![Express.Js](https://img.shields.io/badge/Express.Js-%23404d59.svg?&style=for-the-badge&logo=express&logoColor=white)
 ![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
 
 #### Rest Stack
@@ -25,11 +25,11 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 ![Nuxt.Js](https://img.shields.io/badge/Nuxt.Js-%23323330.svg?&style=for-the-badge&logo=Nuxt.js&logoColor=white)
 ![Nest.Js](https://img.shields.io/badge/Nest.Js-%23323330.svg?&style=for-the-badge&logo=Nestjs&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-%23323330.svg?&style=for-the-badge&logo=laravel&logoColor=white)
-![Django](https://img.shields.io/badge/Django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white)
+![Django](https://img.shields.io/badge/Django-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white)
 ![Wordpress](https://img.shields.io/badge/Wordpress-%2314354C.svg?&style=for-the-badge&logo=wordpress&logoColor=white)
 
 ![MySql](https://img.shields.io/badge/MySql-%23323330.svg?&style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-%23323330.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
