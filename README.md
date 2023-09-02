@@ -63,7 +63,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
     <img align="center" src="https://www.svgrepo.com/show/111199/instagram.svg" height="30" width="40" />
   </a>
   
-  <a href="https://wasap.my/601128094804" target="_blank" style="padding: 0 15px;">
+  <a href="https://wasap.my/962788424973" target="_blank" style="padding: 0 15px;">
     <img align="center" src="https://www.svgrepo.com/show/158412/whatsapp.svg" height="30" width="40" />
   </a>
   
@@ -77,10 +77,6 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
   
   <a href="https://discordapp.com/users/772634530992619530" target="_blank" style="padding: 0 15px;">
     <img align="center" src="https://www.svgrepo.com/show/343548/discord-communication-interaction-message-network.svg" height="30" width="40" />
-  </a>
-  
-  <a href="https://slack.com/app_redirect?channel=U02TS20JT8X" target="_blank" style="padding: 0 15px;">
-    <img align="center" src="https://www.svgrepo.com/show/355247/slack.svg" height="30" width="40" />
   </a>
 </p>
   
