@@ -43,7 +43,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
 ### 📫 Reach me through...
 <p>
-  <a href="https://suhaib.dev" target="_blank" style="padding: 0 15px;">
+  <a href="https://suhaib.dev" target="blank" style="padding: 0 15px;">
     <img align="center" src="https://www.svgrepo.com/show/81531/website.svg" height="30" width="40" />
   </a>
   
