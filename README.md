@@ -19,11 +19,11 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
 #### Rest Stack
 ![Next.Js](https://img.shields.io/badge/Next.Js-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white)
-![Vite.Js](https://img.shields.io/badge/Vite.Js-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white)
-![Three.Js](https://img.shields.io/badge/Three.Js-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white)
+![Vite.Js](https://img.shields.io/badge/Vite.Js-%23323330.svg?&style=for-the-badge&logo=react&logoColor=white)
+![Three.Js](https://img.shields.io/badge/Three.Js-%23323330.svg?&style=for-the-badge&logo=three.js&logoColor=white)
 ![Vue.Js](https://img.shields.io/badge/Vue.Js-%23323330.svg?&style=for-the-badge&logo=vue.js&logoColor=white)
-![Nuxt.Js](https://img.shields.io/badge/Nuxt.Js-%23323330.svg?&style=for-the-badge&logo=vue.js&logoColor=white)
-![Nest.Js](https://img.shields.io/badge/Nest.Js-%23323330.svg?&style=for-the-badge&logo=vue.js&logoColor=white)
+![Nuxt.Js](https://img.shields.io/badge/Nuxt.Js-%23323330.svg?&style=for-the-badge&logo=Nuxt.js&logoColor=white)
+![Nest.Js](https://img.shields.io/badge/Nest.Js-%23323330.svg?&style=for-the-badge&logo=Nestjs&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-%23323330.svg?&style=for-the-badge&logo=laravel&logoColor=white)
 ![Django](https://img.shields.io/badge/Django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white)
 ![Wordpress](https://img.shields.io/badge/Wordpress-%2314354C.svg?&style=for-the-badge&logo=wordpress&logoColor=white)
@@ -32,7 +32,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 ![Docker](https://img.shields.io/badge/Docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23323330.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
 ![JQUERY](https://img.shields.io/badge/JQUERY-%23323330.svg?&style=for-the-badge&logo=jquery&logoColor=white)
 ![JSON](https://img.shields.io/badge/JSON-%23323330.svg?&style=for-the-badge&logo=json&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-%23323330.svg?&style=for-the-badge&logo=python&logoColor=white)
