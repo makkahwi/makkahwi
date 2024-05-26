@@ -5,7 +5,7 @@
 This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
 Ranking On Github By Commits
-[![committers.top badge](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
+[!(https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
 
   <a href="https://buymeacoffee.com/makkahwi" target="_blank">
   I'm more into tea, but if you're buying coffee, I'll drink 
