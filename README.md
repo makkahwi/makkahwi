@@ -4,6 +4,8 @@
 
 This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
+[![committers.top badge](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
+
   <a href="https://buymeacoffee.com/makkahwi" target="_blank">
   I'm more into tea, but if you're buying coffee, I'll drink 
     <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" align="center"/>
