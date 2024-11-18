@@ -7,7 +7,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 Ranking On Github By Commits 
 [![Ranking On Github By Commits](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
 
- Working simutnsoluy on many closed-source & open-source solutions and projects. You may be part of it & [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
+ Working simultaneously on many closed-source & open-source solutions and projects. You may be part of them and [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
 
 ### 📫 My Stacks...
 
