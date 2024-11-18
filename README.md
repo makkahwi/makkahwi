@@ -7,10 +7,7 @@ This is Suhaib Ahmad, Senior Full-Stack Web Developer
 Ranking On Github By Commits 
 [![Ranking On Github By Commits](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
 
-  <a href="https://buymeacoffee.com/makkahwi" target="_blank">
-  I'm more into tea, but if you're buying coffee, I'll drink 
-    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" align="center"/>
-  </a>
+ Working simutnsoluy on many closed-source & open-source solutions and projects. You may be part of it & [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
 
 ### 📫 My Stacks...
 
