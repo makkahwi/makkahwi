@@ -13,9 +13,10 @@ Ranking On Github By Commits
 
 #### Most Used Stack
 ![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
-![Express.Js](https://img.shields.io/badge/Express.Js-%23404d59.svg?&style=for-the-badge&logo=express&logoColor=white)
+![Nest.Js](https://img.shields.io/badge/Nest.Js-%23E0234E.svg?&style=for-the-badge&logo=Nestjs&logoColor=white)
 ![React.Js](https://img.shields.io/badge/React.Js-%230db7ed.svg?&style=for-the-badge&logo=react&logoColor=white)
 ![Node.JS](https://img.shields.io/badge/Node.JS-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
 
 #### All Stack
 
