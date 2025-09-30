@@ -23,7 +23,7 @@ Ranking On Github By Commits
 ##### Frontend
 
 ![Next.Js](https://img.shields.io/badge/Next.Js-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white)
-![Vite.Js](https://img.shields.io/badge/Vite.Js-%23777BB4.svg?&style=for-the-badge&logo=react&logoColor=white)
+![Vite.Js](https://img.shields.io/badge/Vite.Js-%23777BB4.svg?&style=for-the-badge&logo=vite&logoColor=white)
 ![Remix.Js](https://img.shields.io/badge/Remix.Js-%23777BB4.svg?&style=for-the-badge&logo=remix&logoColor=white)
 ![Three.Js](https://img.shields.io/badge/Three.Js-%23323330.svg?&style=for-the-badge&logo=three.js&logoColor=white)
 ![Vue.Js](https://img.shields.io/badge/Vue.Js-%234FC08D.svg?&style=for-the-badge&logo=vue.js&logoColor=white)
