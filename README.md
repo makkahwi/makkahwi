@@ -1,27 +1,31 @@
-### Hi there 👋
+### 👋 Hi there
 
-<!-- ### 🔭 I work with... -->
+I’m **Suhaib Ahmad** — a **Senior Full-Stack Developer** passionate about building scalable, data-driven web ecosystems.  
+My work blends backend robustness with frontend clarity, powering education, nonprofit, and automation platforms across **Jordan**, **Saudi Arabia**, and beyond.
 
-This is Suhaib Ahmad, Senior Full-Stack Web Developer
+---
 
-Ranking On Github By Commits
-[![Ranking On Github By Commits](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
+### 🚀 Current Focus
 
-Working simultaneously on many closed-source & open-source solutions and projects. You may be part of them and [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
+- 🧩 Building **Semesteer**, a Student Information System empowering MENA schools.
+- 💡 Developing **Raven**, a NestJS-based code generator for microservice scaffolding.
+- 🌍 Engineering **Mustaheq**, a nonprofit ERP platform for Saudi aid foundations.
 
-### 📫 My Stacks...
+---
 
-#### Most Used Stack
+### 🧰 Tech Stack
 
-![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
+**Core Technologies**
+
 ![Nest.Js](https://img.shields.io/badge/Nest.Js-%23E0234E.svg?&style=for-the-badge&logo=Nestjs&logoColor=white)
 ![React.Js](https://img.shields.io/badge/React.Js-%230db7ed.svg?&style=for-the-badge&logo=react&logoColor=white)
-![Node.JS](https://img.shields.io/badge/Node.JS-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/Postgres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
 
-#### All Stack
+<details>
+<summary>📦 View Full Tech Stack</summary>
 
-##### Frontend
+#### 🖥️ Frontend
 
 ![Next.Js](https://img.shields.io/badge/Next.Js-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white)
 ![Vite.Js](https://img.shields.io/badge/Vite.Js-%23777BB4.svg?&style=for-the-badge&logo=vite&logoColor=white)
@@ -34,13 +38,12 @@ Working simultaneously on many closed-source & open-source solutions and project
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
 ![JQUERY](https://img.shields.io/badge/JQUERY-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white)
-![JSON](https://img.shields.io/badge/JSON-%23323330.svg?&style=for-the-badge&logo=json&logoColor=white)
-![Html5](https://img.shields.io/badge/HTML%205-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
-![Css3](https://img.shields.io/badge/CSS%203-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
 ![BootStrap](https://img.shields.io/badge/BootStrap-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-%2300BCFF.svg?&style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-##### Backend
+#### ⚙️ Backend
 
 ![Node.JS](https://img.shields.io/badge/Node.JS-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.Js](https://img.shields.io/badge/Express.Js-%23404d59.svg?&style=for-the-badge&logo=express&logoColor=white)
@@ -48,13 +51,10 @@ Working simultaneously on many closed-source & open-source solutions and project
 ![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?&style=for-the-badge&logo=laravel&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white)
 ![GoLang](https://img.shields.io/badge/GoLang-%2300A7D0.svg?&style=for-the-badge&logo=go&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&style=for-the-badge&logo=TypeScript&logoColor=white)
-![JSON](https://img.shields.io/badge/JSON-%23323330.svg?&style=for-the-badge&logo=json&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?&style=for-the-badge&logo=php&logoColor=white)
 
-##### Databases
+#### 🗄️ Databases
 
 ![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySql](https://img.shields.io/badge/MySql-%23ffa518.svg?&style=for-the-badge&logo=mysql&logoColor=white)
@@ -62,22 +62,61 @@ Working simultaneously on many closed-source & open-source solutions and project
 ![Firebase](https://img.shields.io/badge/Firebase-%23DD2C00.svg?&style=for-the-badge&logo=firebase&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-%23004364.svg?&style=for-the-badge&logo=sqlite&logoColor=white)
 
-##### DevOps & Tools
+#### ☁️ DevOps & Tools
 
 ![AWS](https://img.shields.io/badge/AWS-%23ff9900.svg?&style=for-the-badge&logo=amazon&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-%232088FF.svg?&style=for-the-badge&logo=githubactions&logoColor=white)
 
-### 📊 GitHub Stats
+</details>
+
+---
+
+### 📊 GitHub Insights
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=makkahwi&show_icons=true&theme=react&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
 <!-- STATS:END -->
+
+---
 
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
 <!-- RECENT:END -->
 
+---
+
+### 🧩 Featured Projects
+
+| Project       | Description                                        | Tech                        |
+| ------------- | -------------------------------------------------- | --------------------------- |
+| **Semesteer** | Student Information System for Jordanian schools   | NestJS · React · PostgreSQL |
+| **Mustaheq**  | Nonprofit ERP platform for Saudi aid management    | Laravel · Vue · MySQL       |
+| **Raven**     | Code generator that scaffolds NestJS microservices | Node.js · TypeScript        |
+
+---
+
+### 📈 Ranking & Recognition
+
+[![Ranking On Github By Commits](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)  
+Working simultaneously on many closed-source & open-source solutions and projects.  
+You might already be part of one — consider [![Sponsoring Me](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
+
+---
+
+### 🧭 Beyond Code
+
+When not coding, I’m exploring **AI-assisted development**, **educational analytics**, and **developer tooling**.  
+I also enjoy **3D design**, **minimalist UI layouts**, and the occasional **Zarb cookout** 🔥.
+
+---
+
 ### 📫 Reach me through the contacts on the sidebar
+
+---
 
 <!--
 **makkahwi/makkahwi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
