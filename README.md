@@ -7,8 +7,8 @@ My work blends backend robustness with frontend clarity, powering education, non
 
 ### 🚀 Current Focus
 
-- 🧩 Building **Semesteer**, a Student Information System empowering MENA schools.
-- 💡 Developing **Raven**, a NestJS-based code generator for microservice scaffolding.
+- 🧩 Building **Several Brands** internal sales & marketing operations management platform.
+- 💡 Developing **Raven**, a code generator for NestJS-based backend app.
 - 🌍 Engineering **Mustaheq**, a nonprofit ERP platform for Saudi aid foundations.
 
 ---
@@ -75,6 +75,9 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 📊 GitHub Insights
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=makkahwi&show_icons=true&theme=react&hide_border=true)
+
+<br/>
+
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
@@ -91,11 +94,13 @@ My work blends backend robustness with frontend clarity, powering education, non
 
 ### 🧩 Featured Projects
 
-| Project       | Description                                        | Tech                        |
-| ------------- | -------------------------------------------------- | --------------------------- |
-| **Semesteer** | Student Information System for Jordanian schools   | NestJS · React · PostgreSQL |
-| **Mustaheq**  | Nonprofit ERP platform for Saudi aid management    | Laravel · Vue · MySQL       |
-| **Raven**     | Code generator that scaffolds NestJS microservices | Node.js · TypeScript        |
+| Project       | Description                                      | Tech                        |
+| ------------- | ------------------------------------------------ | --------------------------- |
+| **Raven**     | Code generator that scaffolds NestJS backend app | Node.js · TypeScript        |
+| **Mustaheq**  | Nonprofit ERP platform for Saudi aid management  | Laravel · Vue · MySQL       |
+| **Semesteer** | Student Information System for Jordanian schools | NestJS · React · PostgreSQL |
+
+Check all projects @ [My Portfolio](https://suhaib.dev/)
 
 ---
 
@@ -116,14 +121,11 @@ I also enjoy **3D design**, **minimalist UI layouts**, and the occasional **Zarb
 
 ### 📫 Reach me through the contacts on the sidebar
 
----
-
 <!--
 **makkahwi/makkahwi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
