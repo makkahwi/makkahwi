@@ -1,0 +1,139 @@
+name: Weekly Stats Auto Update
+on:
+  schedule: [{ cron: "30 23 * * 6" }] # weekly (Saturday 23:30 UTC)
+  workflow_dispatch: {}
+permissions: { contents: write }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ACTOR: ${{ github.actor }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build sections (stats + languages + recent PRs) and archive
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          NOW_UTC="$(date -u +'%Y-%m-%d %H:%M UTC')"
+          TO_DATE="$(date -u +%F)"
+          FROM_DATE="$(date -u -d '6 days ago' +%F)"   # 7-day window inclusive
+
+          # --------------------------
+          # 1) Top Languages (public)
+          # --------------------------
+          # Pull commits you authored in the last 7 days (public only with default token).
+          # We page up to 1000 commits max (10 x 100).
+          TMP_COMMITS="$(mktemp)"
+          > "$TMP_COMMITS"
+          for PAGE in $(seq 1 10); do
+            RESP=$(gh api -H "Accept: application/vnd.github+json" \
+              "/search/commits?q=author:${ACTOR}+committer-date:${FROM_DATE}..${TO_DATE}&sort=committer-date&order=desc&per_page=100&page=${PAGE}" \
+              || echo '{}')
+            COUNT=$(echo "$RESP" | jq '.items|length // 0')
+            echo "$RESP" >> "$TMP_COMMITS"
+            [ "$COUNT" -lt 100 ] && break
+          done
+
+          # Unique repos touched
+          mapfile -t REPOS < <(jq -r '.items[]?.repository?.full_name // empty' "$TMP_COMMITS" | sort -u)
+
+          # Aggregate languages by bytes across those repos
+          TMP_LANG_LINES="$(mktemp)"
+          > "$TMP_LANG_LINES"
+          for FULL in "${REPOS[@]}"; do
+            # Each returns: {"Lang":bytes,...}
+            gh api "/repos/${FULL}/languages" 2>/dev/null \
+              | jq -r 'to_entries[] | "\(.key) \(.value)"' >> "$TMP_LANG_LINES" || true
+          done
+
+          # Sum per language
+          # Produces: LANG BYTES (sorted desc)
+          LANG_TABLE="$(awk '
+            { bytes[$1]+=$2 }
+            END { for (l in bytes) printf "%s %d\n", l, bytes[l] }
+          ' "$TMP_LANG_LINES" | sort -k2,2nr)"
+
+          # Markdown list (top 10)
+          TOP_LANG_MD="$(echo "$LANG_TABLE" \
+            | head -n 10 \
+            | awk 'function human(n){u[0]="B";u[1]="KB";u[2]="MB";u[3]="GB";i=0;while(n>=1024 && i<3){n/=1024;i++} return sprintf("%.1f %s", n,u[i])}
+                   { printf "- `%s`: %s\n", $1, human($2) }')"
+
+          # --------------------------
+          # 2) Stats block (minimal)
+          # --------------------------
+          # Keep your simple header and add window line.
+          {
+            echo "**Updated:** ${NOW_UTC}"
+            echo
+            echo "**Window:** ${FROM_DATE} → ${TO_DATE}"
+            echo
+            if [ -n "$TOP_LANG_MD" ]; then
+              echo "**Top languages across public repos touched this week:**"
+              echo
+              echo "$TOP_LANG_MD"
+              echo
+            else
+              echo "_No public commits detected in this window._"
+              echo
+            fi
+          } > _stats.md
+
+          # --------------------------
+          # 3) Recent PRs (unchanged)
+          # --------------------------
+          gh api '/search/issues?q=type:pr+author:'"${ACTOR}"'&per_page=8' \
+            | jq -r '.items[] | "* [\(.title)](\(.html_url)) in **\(.repository_url | capture("/repos/(?<r>.*)$").r)** — \(.state)"' \
+            > _recent.md || true
+
+          # --------------------------
+          # 4) Inject into README.md
+          # --------------------------
+          awk '
+            BEGIN{ s=0 }
+            /<!-- STATS:START -->/{ print; system("cat _stats.md"); s=1; next }
+            /<!-- STATS:END -->/{ s=0 }
+            s==0{ print }
+          ' README.md > README.md.new && mv README.md.new README.md
+
+          awk '
+            BEGIN{ s=0 }
+            /<!-- RECENT:START -->/{ print; system("cat _recent.md"); s=1; next }
+            /<!-- RECENT:END -->/{ s=0 }
+            s==0{ print }
+          ' README.md > README.md.new && mv README.md.new README.md
+
+          # --------------------------
+          # 5) Append to WeeklyTracker.md (archive)
+          # --------------------------
+          {
+            echo "## ${FROM_DATE} → ${TO_DATE}"
+            echo
+            if [ -n "$TOP_LANG_MD" ]; then
+              echo "### Top languages (public) this week"
+              echo
+              echo "$TOP_LANG_MD"
+              echo
+            else
+              echo "_No public commits detected in this window._"
+              echo
+            fi
+            echo "---"
+            echo
+          } >> WeeklyTracker.md
+
+      - name: Commit if changed
+        run: |
+          git add README.md WeeklyTracker.md
+          if ! git diff --cached --quiet; then
+            git -c user.name="Makkahwi Bot" \
+                -c user.email="12345678+makkahwi@users.noreply.github.com" \
+              commit -m "chore(profile): weekly stats & archive [skip ci]"
+            git push
+          else
+            echo "No README / archive changes."
+          fi
