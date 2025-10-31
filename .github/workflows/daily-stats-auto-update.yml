@@ -1,0 +1,199 @@
+name: Daily Stats Auto Update
+
+on:
+  schedule:
+    - cron: "45 20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_PAT != '' && secrets.GH_PAT || github.token }}
+      ACTOR: ${{ github.repository_owner }}
+      TZ_REGION: "Asia/Amman"
+      TARGET_FILE: "DailyTracker.md"
+      SESSION_GAP_MIN: "60"
+      MIN_SESSION_MIN: "5"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify gh
+        run: gh auth status
+
+      - name: Compute daily sessions and append report
+        shell: bash
+        env:
+          GH_TOKEN: ${{ env.GH_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          export TZ="${TZ_REGION}"
+
+          # ----- Window (local day) -----
+          DAY_START_LOCAL="$(date +'%Y-%m-%d 00:00:00 %z')"
+          DAY_END_LOCAL="$(date +'%Y-%m-%d 23:59:59 %z')"
+          DAY_LABEL="$(date +'%Y-%m-%d')"
+
+          # Convert to ISO UTC boundaries for comparisons
+          FROM_ISO_UTC="$(date -u -d "$DAY_START_LOCAL" +%FT%TZ)"
+          TO_ISO_UTC="$(date -u -d "$DAY_END_LOCAL" +%FT%TZ)"
+
+          echo "Calculating sessions for ${DAY_LABEL} (${DAY_START_LOCAL} .. ${DAY_END_LOCAL})"
+
+          # ----- Collect events (public + private visible to token) -----
+          TMP_EVENTS="$(mktemp)"; > "$TMP_EVENTS"
+          for PAGE in $(seq 1 10); do
+            RESP="$(gh api -H 'Accept: application/vnd.github+json' \
+              "/users/${ACTOR}/events?per_page=100&page=${PAGE}" || echo '[]')"
+            echo "$RESP" | jq -c '.[]' >> "$TMP_EVENTS"
+            # Stop if the oldest event on this page is before the window
+            LAST_TS="$(echo "$RESP" | jq -r '.[-1].created_at // empty')"
+            [ -z "$LAST_TS" ] && break
+            if [ "$(date -u -d "$LAST_TS" +%s)" -lt "$(date -u -d "$FROM_ISO_UTC" +%s)" ]; then
+              break
+            fi
+          done
+
+          # ----- Extract commit timestamps from PushEvents that fall inside the local-day window -----
+          # Use commit timestamps from payload.commits[].timestamp (ISO with tz)
+          TMP_COMMITS="$(mktemp)"; > "$TMP_COMMITS"
+          jq -r --arg FROM "$FROM_ISO_UTC" --arg TO "$TO_ISO_UTC" '
+            select(.type == "PushEvent") |
+            # keep events that intersect the day; then we filter commits individually
+            .payload.commits[]? |
+            .timestamp as $ts |
+            select($ts >= $FROM and $ts <= $TO) |
+            .timestamp
+          ' "$TMP_EVENTS" >> "$TMP_COMMITS"
+
+          # If desired, also count PR open/merge times as "activity anchors" (optional):
+          # TMP_PRS="$(mktemp)"; > "$TMP_PRS"
+          # jq -r --arg FROM "$FROM_ISO_UTC" --arg TO "$TO_ISO_UTC" '
+          #   select(.type == "PullRequestEvent") |
+          #   .payload.pull_request.created_at? as $c |
+          #   .payload.pull_request.merged_at? as $m |
+          #   [$c,$m] | .[] | select(. != null) |
+          #   select(. >= $FROM and . <= $TO)
+          # ' "$TMP_EVENTS" >> "$TMP_PRS"
+          # cat "$TMP_PRS" >> "$TMP_COMMITS"
+
+          # To improve robustness, de-dup and sort timestamps
+          mapfile -t TS_LIST < <(sort -u "$TMP_COMMITS")
+
+          if [ "${#TS_LIST[@]}" -eq 0 ]; then
+            {
+              echo "### ${DAY_LABEL}"
+              echo
+              echo "_No commits detected today._"
+              echo
+              echo "---"
+              echo
+            } >> "${TARGET_FILE}"
+            echo "No commits — appended empty report."
+            exit 0
+          fi
+
+          # ----- Convert timestamps to local epoch and sort -----
+          to_epoch_local() {
+            date -d "$1" +%s
+          }
+
+          TMP_EPOCHS="$(mktemp)"; > "$TMP_EPOCHS"
+          for ts in "${TS_LIST[@]}"; do
+            # ts is ISO with its own tz; convert to local epoch seconds
+            echo "$(to_epoch_local "$ts")" >> "$TMP_EPOCHS"
+          done
+
+          mapfile -t EPOCHS < <(sort -n "$TMP_EPOCHS")
+
+          # ----- Group into sessions -----
+          GAP=$(( SESSION_GAP_MIN * 60 ))
+          MINLEN=$(( MIN_SESSION_MIN * 60 ))
+
+          # Build sessions as [start_epoch, end_epoch, count]
+          S_START="${EPOCHS[0]}"
+          S_END="${EPOCHS[0]}"
+          S_COUNT=1
+
+          SESS_FILE="$(mktemp)"; > "$SESS_FILE"
+
+          for ((i=1; i<${#EPOCHS[@]}; i++)); do
+            cur="${EPOCHS[$i]}"
+            prev="${EPOCHS[$((i-1))]}"
+
+            if [ $((cur - prev)) -ge $GAP ]; then
+              # close previous session
+              echo "${S_START} ${S_END} ${S_COUNT}" >> "$SESS_FILE"
+              # start new
+              S_START="$cur"
+              S_END="$cur"
+              S_COUNT=1
+            else
+              # continue session
+              S_END="$cur"
+              S_COUNT=$((S_COUNT+1))
+            fi
+          done
+          # close last
+          echo "${S_START} ${S_END} ${S_COUNT}" >> "$SESS_FILE"
+
+          # ----- Render sessions + totals -----
+          human_dur() {
+            local secs="$1"
+            local h=$((secs/3600))
+            local m=$(((secs%3600)/60))
+            local s=$((secs%60))
+            if [ $h -gt 0 ]; then
+              printf "%dh %02dm" "$h" "$m"
+            elif [ $m -gt 0 ]; then
+              printf "%dm" "$m"
+            else
+              printf "%ds" "$s"
+            fi
+          }
+
+          TOTAL_SESS=0
+          TOTAL_SECS=0
+
+          SESS_MD="$(mktemp)"; > "$SESS_MD"
+          while read -r s e c; do
+            dur=$(( e - s ))
+            [ $dur -lt 0 ] && dur=0
+            # If single-commit session, count a minimum
+            if [ "$c" -eq 1 ] && [ $dur -lt $MINLEN ]; then
+              dur=$MINLEN
+            fi
+            TOTAL_SESS=$((TOTAL_SESS+1))
+            TOTAL_SECS=$((TOTAL_SECS+dur))
+            START_LOCAL="$(date -d "@$s" +'%H:%M')"
+            END_LOCAL="$(date -d "@$e" +'%H:%M')"
+            echo "- ⏱️ ${START_LOCAL} → ${END_LOCAL} • $(human_dur "$dur") • ${c} commit(s)" >> "$SESS_MD"
+          done < "$SESS_FILE"
+
+          # ----- Append to DailyTracker.md -----
+          {
+            echo "### ${DAY_LABEL}"
+            echo
+            echo "**Sessions:** ${TOTAL_SESS} &nbsp;&nbsp;|&nbsp;&nbsp; **Total time:** $(human_dur "$TOTAL_SECS")"
+            echo
+            cat "$SESS_MD"
+            echo
+            echo "---"
+            echo
+          } >> "${TARGET_FILE}"
+
+      - name: Commit if changed
+        run: |
+          git add "${TARGET_FILE}"
+          if ! git diff --cached --quiet; then
+            git -c user.name="Makkahwi Bot" \
+                -c user.email="makkahwi.suhaib.dev@users.noreply.github.com" \
+              commit -m "chore(tracker): daily coding sessions for $(date +%F)"
+            git push
+          else
+            echo "No tracker changes."
+          fi
