@@ -122,10 +122,10 @@ jobs:
           # 5) Append to WeeklyTracker.md (archive)
           # --------------------------
           {
-            echo "## ${FROM_DATE} → ${TO_DATE}"
+            echo "### ${FROM_DATE} → ${TO_DATE}"
             echo
             if [ -n "$TOP_LANG_MD" ]; then
-              echo "### Top languages (public) this week"
+              echo "#### Top languages (public) this week"
               echo
               echo "$TOP_LANG_MD"
               echo

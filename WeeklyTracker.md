@@ -1,8 +1,13 @@
-## 2025-10-25 → 2025-10-31
+# Weekly Development Report
 
-### Top languages (public) this week
+A summary of my coding activity for every week.
+
+## Report
+
+### 2025-10-25 → 2025-10-31
+
+#### Top languages (public) this week
 
 - `JavaScript`: 9.2 KB
 
 ---
-
