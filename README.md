@@ -4,14 +4,15 @@
 
 This is Suhaib Ahmad, Senior Full-Stack Web Developer
 
-Ranking On Github By Commits 
+Ranking On Github By Commits
 [![Ranking On Github By Commits](https://user-badge.committers.top/jordan_private/makkahwi.svg)](https://user-badge.committers.top/jordan_private/makkahwi)
 
- Working simultaneously on many closed-source & open-source solutions and projects. You may be part of them and [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
+Working simultaneously on many closed-source & open-source solutions and projects. You may be part of them and [![financially](https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-red)](https://github.com/sponsors/makkahwi)
 
 ### 📫 My Stacks...
 
 #### Most Used Stack
+
 ![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
 ![Nest.Js](https://img.shields.io/badge/Nest.Js-%23E0234E.svg?&style=for-the-badge&logo=Nestjs&logoColor=white)
 ![React.Js](https://img.shields.io/badge/React.Js-%230db7ed.svg?&style=for-the-badge&logo=react&logoColor=white)
@@ -53,7 +54,6 @@ Ranking On Github By Commits
 ![Python](https://img.shields.io/badge/Python-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?&style=for-the-badge&logo=php&logoColor=white)
 
-
 ##### Databases
 
 ![PostgreSql](https://img.shields.io/badge/PostGres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
@@ -67,9 +67,18 @@ Ranking On Github By Commits
 ![AWS](https://img.shields.io/badge/AWS-%23ff9900.svg?&style=for-the-badge&logo=amazon&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
 
+### 📊 GitHub Stats
+
+<!-- STATS:START -->
+<!-- STATS:END -->
+
+### 🏆 Recent Contributions
+
+<!-- RECENT:START -->
+<!-- RECENT:END -->
 
 ### 📫 Reach me through the contacts on the sidebar
-  
+
 <!--
 **makkahwi/makkahwi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

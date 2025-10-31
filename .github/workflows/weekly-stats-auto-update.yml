@@ -1,17 +1,28 @@
 name: Weekly Stats Auto Update
+
 on:
-  schedule: [{ cron: "30 23 * * 6" }] # weekly (Saturday 23:30 UTC)
+  schedule: [{ cron: "30 23 * * 6" }] # Saturday 23:30 UTC
   workflow_dispatch: {}
-permissions: { contents: write }
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ github.token }}
-      ACTOR: ${{ github.actor }}
+      GH_TOKEN: ${{ secrets.GH_PAT != '' && secrets.GH_PAT || github.token }}
+      ACTOR: ${{ github.repository_owner }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check gh auth
+        run: gh auth status
+
+      - name: Set git identity
+        run: |
+          git config user.name  "Makkahwi Bot"
+          git config user.email "makkahwi.suhaib.dev@users.noreply.github.com"
 
       - name: Build sections (stats + languages + recent PRs) and archive
         shell: bash
@@ -130,9 +141,7 @@ jobs:
         run: |
           git add README.md WeeklyTracker.md
           if ! git diff --cached --quiet; then
-            git -c user.name="Makkahwi Bot" \
-                -c user.email="12345678+makkahwi@users.noreply.github.com" \
-              commit -m "chore(profile): weekly stats & archive [skip ci]"
+            git commit -m "chore(profile): weekly stats & archive [skip ci]"
             git push
           else
             echo "No README / archive changes."
