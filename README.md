@@ -81,13 +81,13 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2025-10-31 07:22 UTC
+**Updated:** 2025-11-01 23:38 UTC
 
-**Window:** 2025-10-25 → 2025-10-31
+**Window:** 2025-10-26 → 2025-11-01
 
 **Top languages across public repos touched this week:**
 
-- `JavaScript`: 9.2 KB
+- `JavaScript`: 23.0 KB
 
 <!-- STATS:END -->
 
