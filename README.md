@@ -81,13 +81,17 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2025-11-01 23:38 UTC
+**Updated:** 2025-11-08 23:38 UTC
 
-**Window:** 2025-10-26 → 2025-11-01
+**Window:** 2025-11-02 → 2025-11-08
 
 **Top languages across public repos touched this week:**
 
-- `JavaScript`: 23.0 KB
+- `TypeScript`: 88.7 KB
+- `CSS`: 7.2 KB
+- `SCSS`: 423.0 B
+- `JavaScript`: 200.0 B
+- `HTML`: 53.0 B
 
 <!-- STATS:END -->
 
@@ -96,6 +100,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Minor Fixes](https://github.com/makkahwi/development-resume/pull/50) in **makkahwi/development-resume** — closed
 * [Revert "Rebuild API Calls To Revalidate Though API Route"](https://github.com/makkahwi/development-resume/pull/49) in **makkahwi/development-resume** — closed
 * [Add Data API Calls To Revalidate Though API Route](https://github.com/makkahwi/development-resume/pull/48) in **makkahwi/development-resume** — closed
 * [Add Mafia Game](https://github.com/makkahwi/games-assistant/pull/11) in **makkahwi/games-assistant** — closed
@@ -103,7 +108,6 @@ My work blends backend robustness with frontend clarity, powering education, non
 * [Update HobbyZone](https://github.com/makkahwi/personal-3d-website/pull/4) in **makkahwi/personal-3d-website** — closed
 * [Hobbies Zone](https://github.com/makkahwi/personal-3d-website/pull/3) in **makkahwi/personal-3d-website** — closed
 * [Fix Minor Issues](https://github.com/makkahwi/personal-3d-website/pull/2) in **makkahwi/personal-3d-website** — closed
-* [Initial Text-Based Contents](https://github.com/makkahwi/personal-3d-website/pull/1) in **makkahwi/personal-3d-website** — closed
 <!-- RECENT:END -->
 
 ---
