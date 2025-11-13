@@ -61,12 +61,17 @@ jobs:
           # ----- Extract commit timestamps from PushEvents that fall inside the local-day window -----
           # Use commit timestamps from payload.commits[].timestamp (ISO with tz)
           TMP_COMMITS="$(mktemp)"; > "$TMP_COMMITS"
-          jq -r --arg FROM "$FROM_ISO_UTC" --arg TO "$TO_ISO_UTC" '
+
+          FROM_EPOCH="$(date -u -d "$FROM_ISO_UTC" +%s)"
+          TO_EPOCH="$(date -u -d "$TO_ISO_UTC" +%s)"
+
+          jq -r --arg FROM_EPOCH "$FROM_EPOCH" --arg TO_EPOCH "$TO_EPOCH" '
             select(.type == "PushEvent") |
-            # keep events that intersect the day; then we filter commits individually
             .payload.commits[]? |
             .timestamp as $ts |
-            select($ts >= $FROM and $ts <= $TO) |
+            # Convert ISO timestamp to epoch for proper numeric comparison
+            ($ts | fromdateiso8601) as $epoch |
+            select($epoch >= ($FROM_EPOCH | tonumber) and $epoch <= ($TO_EPOCH | tonumber)) |
             .timestamp
           ' "$TMP_EVENTS" >> "$TMP_COMMITS"
 
