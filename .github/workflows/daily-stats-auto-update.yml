@@ -12,7 +12,7 @@ jobs:
   track:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.GH_PAT != '' && secrets.GH_PAT || github.token }}
+      GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
       ACTOR: ${{ github.repository_owner }}
       TZ_REGION: "Asia/Amman"
       TARGET_FILE: "DailyTracker.md"
@@ -42,9 +42,11 @@ jobs:
           FROM_ISO_UTC="$(date -u -d "$DAY_START_LOCAL" +%FT%TZ)"
           TO_ISO_UTC="$(date -u -d "$DAY_END_LOCAL" +%FT%TZ)"
 
-          echo "Calculating sessions for ${DAY_LABEL} (${DAY_START_LOCAL} .. ${DAY_END_LOCAL})"
-          echo "FROM_ISO_UTC: ${FROM_ISO_UTC}"
-          echo "TO_ISO_UTC: ${TO_ISO_UTC}"
+          echo "========================================="
+          echo "Calculating sessions for ${DAY_LABEL}"
+          echo "Local window: ${DAY_START_LOCAL} .. ${DAY_END_LOCAL}"
+          echo "UTC window: ${FROM_ISO_UTC} .. ${TO_ISO_UTC}"
+          echo "========================================="
 
           # ----- Collect events (public + private visible to token) -----
           TMP_EVENTS="$(mktemp)"; > "$TMP_EVENTS"
