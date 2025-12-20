@@ -81,17 +81,21 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2025-12-13 23:40 UTC
+**Updated:** 2025-12-20 23:40 UTC
 
-**Window:** 2025-12-07 → 2025-12-13
+**Window:** 2025-12-14 → 2025-12-20
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 230.1 KB
-- `JavaScript`: 11.7 KB
-- `HTML`: 2.6 KB
-- `CSS`: 836.0 B
-- `SCSS`: 155.0 B
+- `TypeScript`: 730.5 KB
+- `JavaScript`: 6.4 KB
+- `SCSS`: 5.2 KB
+- `Handlebars`: 3.0 KB
+- `CSS`: 1.8 KB
+- `HTML`: 1.5 KB
+- `Dockerfile`: 1.3 KB
+- `Shell`: 735.0 B
+- `Makefile`: 93.0 B
 
 <!-- STATS:END -->
 
@@ -100,14 +104,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
-* [Update DB Backup](https://github.com/makkahwi/development-resume/pull/51) in **makkahwi/development-resume** — closed
-* [Minor Fixes](https://github.com/makkahwi/development-resume/pull/50) in **makkahwi/development-resume** — closed
-* [Revert "Rebuild API Calls To Revalidate Though API Route"](https://github.com/makkahwi/development-resume/pull/49) in **makkahwi/development-resume** — closed
-* [Add Data API Calls To Revalidate Though API Route](https://github.com/makkahwi/development-resume/pull/48) in **makkahwi/development-resume** — closed
-* [Add Mafia Game](https://github.com/makkahwi/games-assistant/pull/11) in **makkahwi/games-assistant** — closed
-* [Update Hobbies Section](https://github.com/makkahwi/personal-3d-website/pull/5) in **makkahwi/personal-3d-website** — closed
-* [Update HobbyZone](https://github.com/makkahwi/personal-3d-website/pull/4) in **makkahwi/personal-3d-website** — closed
-* [Hobbies Zone](https://github.com/makkahwi/personal-3d-website/pull/3) in **makkahwi/personal-3d-website** — closed
+* [Build: Vite Dev Wrapper](https://github.com/baseflow-labs/initia-frontend-template/pull/12) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Roadmap Contents](https://github.com/baseflow-labs/initia-frontend-template/pull/11) in **baseflow-labs/initia-frontend-template** — closed
+* [Build: Vite Wrapper](https://github.com/baseflow-labs/initia-frontend-template/pull/10) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Version Bump Workflow](https://github.com/baseflow-labs/initia-frontend-template/pull/9) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Env Vars Structure](https://github.com/baseflow-labs/initia-frontend-template/pull/8) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Workflows](https://github.com/baseflow-labs/initia-frontend-template/pull/7) in **baseflow-labs/initia-frontend-template** — closed
+* [Several Updates Of Components & Documentation](https://github.com/baseflow-labs/initia-frontend-template/pull/6) in **baseflow-labs/initia-frontend-template** — closed
+* [Several Updates](https://github.com/baseflow-labs/initia-frontend-template/pull/5) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---

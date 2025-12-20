@@ -63,3 +63,19 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2025-12-14 → 2025-12-20
+
+#### Top languages (public) this week
+
+- `TypeScript`: 730.5 KB
+- `JavaScript`: 6.4 KB
+- `SCSS`: 5.2 KB
+- `Handlebars`: 3.0 KB
+- `CSS`: 1.8 KB
+- `HTML`: 1.5 KB
+- `Dockerfile`: 1.3 KB
+- `Shell`: 735.0 B
+- `Makefile`: 93.0 B
+
+---
+
