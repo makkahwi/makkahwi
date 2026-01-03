@@ -81,18 +81,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2025-12-27 23:41 UTC
+**Updated:** 2026-01-03 23:41 UTC
 
-**Window:** 2025-12-21 → 2025-12-27
+**Window:** 2025-12-28 → 2026-01-03
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 453.0 KB
-- `SCSS`: 5.3 KB
-- `HTML`: 1.8 KB
-- `Dockerfile`: 1.1 KB
-- `Shell`: 437.0 B
-- `JavaScript`: 374.0 B
+- `TypeScript`: 66.1 KB
+- `HTML`: 1.5 KB
 
 <!-- STATS:END -->
 
@@ -101,6 +97,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Fix Minor Responsiveness Issues](https://github.com/baseflow-labs/initia-landing-page/pull/3) in **baseflow-labs/initia-landing-page** — closed
 * [Fix: Minor Layout UI Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/14) in **baseflow-labs/initia-frontend-template** — closed
 * [Dev](https://github.com/baseflow-labs/initia-frontend-template/pull/13) in **baseflow-labs/initia-frontend-template** — closed
 * [Update Contents](https://github.com/baseflow-labs/initia-landing-page/pull/1) in **baseflow-labs/initia-landing-page** — closed
@@ -108,7 +105,6 @@ My work blends backend robustness with frontend clarity, powering education, non
 * [Fix: Roadmap Contents](https://github.com/baseflow-labs/initia-frontend-template/pull/11) in **baseflow-labs/initia-frontend-template** — closed
 * [Build: Vite Wrapper](https://github.com/baseflow-labs/initia-frontend-template/pull/10) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Version Bump Workflow](https://github.com/baseflow-labs/initia-frontend-template/pull/9) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Env Vars Structure](https://github.com/baseflow-labs/initia-frontend-template/pull/8) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---

@@ -92,3 +92,12 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2025-12-28 → 2026-01-03
+
+#### Top languages (public) this week
+
+- `TypeScript`: 66.1 KB
+- `HTML`: 1.5 KB
+
+---
+
