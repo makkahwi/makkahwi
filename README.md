@@ -81,14 +81,18 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-01-03 23:41 UTC
+**Updated:** 2026-01-10 23:42 UTC
 
-**Window:** 2025-12-28 → 2026-01-03
+**Window:** 2026-01-04 → 2026-01-10
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 66.1 KB
-- `HTML`: 1.5 KB
+- `TypeScript`: 467.6 KB
+- `SCSS`: 5.3 KB
+- `HTML`: 2.3 KB
+- `Dockerfile`: 1.1 KB
+- `Shell`: 449.0 B
+- `JavaScript`: 395.0 B
 
 <!-- STATS:END -->
 
@@ -97,14 +101,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Fix: Changelog Records](https://github.com/baseflow-labs/initia-frontend-template/pull/18) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Changelog Update @ Version Pumping Flow](https://github.com/baseflow-labs/initia-frontend-template/pull/17) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Github Workflows](https://github.com/baseflow-labs/initia-frontend-template/pull/16) in **baseflow-labs/initia-frontend-template** — closed
+* [Fix: Some API Integrations](https://github.com/baseflow-labs/initia-frontend-template/pull/15) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix Minor Responsiveness Issues](https://github.com/baseflow-labs/initia-landing-page/pull/3) in **baseflow-labs/initia-landing-page** — closed
 * [Fix: Minor Layout UI Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/14) in **baseflow-labs/initia-frontend-template** — closed
 * [Dev](https://github.com/baseflow-labs/initia-frontend-template/pull/13) in **baseflow-labs/initia-frontend-template** — closed
 * [Update Contents](https://github.com/baseflow-labs/initia-landing-page/pull/1) in **baseflow-labs/initia-landing-page** — closed
-* [Build: Vite Dev Wrapper](https://github.com/baseflow-labs/initia-frontend-template/pull/12) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Roadmap Contents](https://github.com/baseflow-labs/initia-frontend-template/pull/11) in **baseflow-labs/initia-frontend-template** — closed
-* [Build: Vite Wrapper](https://github.com/baseflow-labs/initia-frontend-template/pull/10) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Version Bump Workflow](https://github.com/baseflow-labs/initia-frontend-template/pull/9) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---
