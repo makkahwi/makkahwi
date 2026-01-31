@@ -81,13 +81,19 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-01-24 23:42 UTC
+**Updated:** 2026-01-31 23:47 UTC
 
-**Window:** 2026-01-18 → 2026-01-24
+**Window:** 2026-01-25 → 2026-01-31
 
 **Top languages across public repos touched this week:**
 
-- ``: 0.0 B
+- `TypeScript`: 699.7 KB
+- `JavaScript`: 12.2 KB
+- `SCSS`: 10.7 KB
+- `Shell`: 4.2 KB
+- `Dockerfile`: 1.7 KB
+- `CSS`: 751.0 B
+- `HTML`: 708.0 B
 
 <!-- STATS:END -->
 
@@ -96,6 +102,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Turn App To Monorepo](https://github.com/baseflow-labs/initia-frontend-template/pull/19) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Changelog Records](https://github.com/baseflow-labs/initia-frontend-template/pull/18) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Changelog Update @ Version Pumping Flow](https://github.com/baseflow-labs/initia-frontend-template/pull/17) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Github Workflows](https://github.com/baseflow-labs/initia-frontend-template/pull/16) in **baseflow-labs/initia-frontend-template** — closed
@@ -103,7 +110,6 @@ My work blends backend robustness with frontend clarity, powering education, non
 * [Fix Minor Responsiveness Issues](https://github.com/baseflow-labs/initia-landing-page/pull/3) in **baseflow-labs/initia-landing-page** — closed
 * [Fix: Minor Layout UI Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/14) in **baseflow-labs/initia-frontend-template** — closed
 * [Dev](https://github.com/baseflow-labs/initia-frontend-template/pull/13) in **baseflow-labs/initia-frontend-template** — closed
-* [Update Contents](https://github.com/baseflow-labs/initia-landing-page/pull/1) in **baseflow-labs/initia-landing-page** — closed
 <!-- RECENT:END -->
 
 ---
