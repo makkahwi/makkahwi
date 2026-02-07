@@ -81,19 +81,17 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-01-31 23:47 UTC
+**Updated:** 2026-02-07 23:56 UTC
 
-**Window:** 2026-01-25 → 2026-01-31
+**Window:** 2026-02-01 → 2026-02-07
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 699.7 KB
-- `JavaScript`: 12.2 KB
-- `SCSS`: 10.7 KB
-- `Shell`: 4.2 KB
-- `Dockerfile`: 1.7 KB
-- `CSS`: 751.0 B
-- `HTML`: 708.0 B
+- `TypeScript`: 89.2 KB
+- `CSS`: 7.2 KB
+- `SCSS`: 423.0 B
+- `JavaScript`: 200.0 B
+- `HTML`: 53.0 B
 
 <!-- STATS:END -->
 
@@ -102,14 +100,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
-* [Turn App To Monorepo](https://github.com/baseflow-labs/initia-frontend-template/pull/19) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Changelog Records](https://github.com/baseflow-labs/initia-frontend-template/pull/18) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Changelog Update @ Version Pumping Flow](https://github.com/baseflow-labs/initia-frontend-template/pull/17) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Github Workflows](https://github.com/baseflow-labs/initia-frontend-template/pull/16) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Some API Integrations](https://github.com/baseflow-labs/initia-frontend-template/pull/15) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix Minor Responsiveness Issues](https://github.com/baseflow-labs/initia-landing-page/pull/3) in **baseflow-labs/initia-landing-page** — closed
-* [Fix: Minor Layout UI Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/14) in **baseflow-labs/initia-frontend-template** — closed
-* [Dev](https://github.com/baseflow-labs/initia-frontend-template/pull/13) in **baseflow-labs/initia-frontend-template** — closed
+* [Update DB Backup](https://github.com/makkahwi/development-resume/pull/51) in **makkahwi/development-resume** — closed
+* [Minor Fixes](https://github.com/makkahwi/development-resume/pull/50) in **makkahwi/development-resume** — closed
+* [Revert "Rebuild API Calls To Revalidate Though API Route"](https://github.com/makkahwi/development-resume/pull/49) in **makkahwi/development-resume** — closed
+* [Add Data API Calls To Revalidate Though API Route](https://github.com/makkahwi/development-resume/pull/48) in **makkahwi/development-resume** — closed
+* [Add Mafia Game](https://github.com/makkahwi/games-assistant/pull/11) in **makkahwi/games-assistant** — closed
+* [Update Hobbies Section](https://github.com/makkahwi/personal-3d-website/pull/5) in **makkahwi/personal-3d-website** — closed
+* [Update HobbyZone](https://github.com/makkahwi/personal-3d-website/pull/4) in **makkahwi/personal-3d-website** — closed
+* [Hobbies Zone](https://github.com/makkahwi/personal-3d-website/pull/3) in **makkahwi/personal-3d-website** — closed
 <!-- RECENT:END -->
 
 ---
