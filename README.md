@@ -81,19 +81,13 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-02-28 23:45 UTC
+**Updated:** 2026-03-07 23:46 UTC
 
-**Window:** 2026-02-22 → 2026-02-28
+**Window:** 2026-03-01 → 2026-03-07
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 770.9 KB
-- `CSS`: 14.5 KB
-- `JavaScript`: 12.3 KB
-- `SCSS`: 10.9 KB
-- `Shell`: 4.0 KB
-- `Dockerfile`: 1.7 KB
-- `HTML`: 708.0 B
+- ``: 0.0 B
 
 <!-- STATS:END -->
 
@@ -102,14 +96,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
-* [Build: Chatbot UI](https://github.com/makkahwi/development-resume/pull/52) in **makkahwi/development-resume** — open
+* [Fix: You Env Vars](https://github.com/makkahwi/development-resume/pull/53) in **makkahwi/development-resume** — closed
+* [Build: Chatbot UI](https://github.com/makkahwi/development-resume/pull/52) in **makkahwi/development-resume** — closed
 * [Fix: ToDo Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/22) in **baseflow-labs/initia-frontend-template** — closed
 * [Build: Page Builder New UI/UX](https://github.com/baseflow-labs/initia-frontend-template/pull/21) in **baseflow-labs/initia-frontend-template** — closed
 * [Build: Initial Docs App](https://github.com/baseflow-labs/initia-frontend-template/pull/20) in **baseflow-labs/initia-frontend-template** — closed
 * [Turn App To Monorepo](https://github.com/baseflow-labs/initia-frontend-template/pull/19) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Changelog Records](https://github.com/baseflow-labs/initia-frontend-template/pull/18) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Changelog Update @ Version Pumping Flow](https://github.com/baseflow-labs/initia-frontend-template/pull/17) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Github Workflows](https://github.com/baseflow-labs/initia-frontend-template/pull/16) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---
