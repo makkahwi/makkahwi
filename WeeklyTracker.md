@@ -212,3 +212,11 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2026-03-15 → 2026-03-21
+
+#### Top languages (public) this week
+
+- ``: 0.0 B
+
+---
+
