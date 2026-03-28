@@ -81,13 +81,16 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-03-21 23:48 UTC
+**Updated:** 2026-03-28 23:55 UTC
 
-**Window:** 2026-03-15 → 2026-03-21
+**Window:** 2026-03-22 → 2026-03-28
 
 **Top languages across public repos touched this week:**
 
-- ``: 0.0 B
+- `TypeScript`: 170.9 KB
+- `CSS`: 16.4 KB
+- `JavaScript`: 1.6 KB
+- `Shell`: 195.0 B
 
 <!-- STATS:END -->
 
@@ -96,6 +99,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Fix: Minor UI & Code Issues](https://github.com/makkahwi/development-resume/pull/54) in **makkahwi/development-resume** — closed
 * [Fix: You Env Vars](https://github.com/makkahwi/development-resume/pull/53) in **makkahwi/development-resume** — closed
 * [Build: Chatbot UI](https://github.com/makkahwi/development-resume/pull/52) in **makkahwi/development-resume** — closed
 * [Fix: ToDo Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/22) in **baseflow-labs/initia-frontend-template** — closed
@@ -103,7 +107,6 @@ My work blends backend robustness with frontend clarity, powering education, non
 * [Build: Initial Docs App](https://github.com/baseflow-labs/initia-frontend-template/pull/20) in **baseflow-labs/initia-frontend-template** — closed
 * [Turn App To Monorepo](https://github.com/baseflow-labs/initia-frontend-template/pull/19) in **baseflow-labs/initia-frontend-template** — closed
 * [Fix: Changelog Records](https://github.com/baseflow-labs/initia-frontend-template/pull/18) in **baseflow-labs/initia-frontend-template** — closed
-* [Fix: Changelog Update @ Version Pumping Flow](https://github.com/baseflow-labs/initia-frontend-template/pull/17) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---

@@ -220,3 +220,14 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2026-03-22 → 2026-03-28
+
+#### Top languages (public) this week
+
+- `TypeScript`: 170.9 KB
+- `CSS`: 16.4 KB
+- `JavaScript`: 1.6 KB
+- `Shell`: 195.0 B
+
+---
+
