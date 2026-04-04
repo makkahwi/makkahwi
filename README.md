@@ -81,16 +81,13 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-03-28 23:55 UTC
+**Updated:** 2026-04-04 23:56 UTC
 
-**Window:** 2026-03-22 → 2026-03-28
+**Window:** 2026-03-29 → 2026-04-04
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 170.9 KB
-- `CSS`: 16.4 KB
-- `JavaScript`: 1.6 KB
-- `Shell`: 195.0 B
+- ``: 0.0 B
 
 <!-- STATS:END -->
 
