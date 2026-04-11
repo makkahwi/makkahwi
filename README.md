@@ -81,9 +81,9 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-04-04 23:56 UTC
+**Updated:** 2026-04-11 23:59 UTC
 
-**Window:** 2026-03-29 → 2026-04-04
+**Window:** 2026-04-05 → 2026-04-11
 
 **Top languages across public repos touched this week:**
 
