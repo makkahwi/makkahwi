@@ -263,3 +263,11 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2026-04-27 → 2026-05-03
+
+#### Top languages (public) this week
+
+- `Python`: 32.8 KB
+
+---
+
