@@ -279,3 +279,12 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2026-05-11 → 2026-05-17
+
+#### Top languages (public) this week
+
+- `JavaScript`: 120.5 KB
+- `HTML`: 730.0 B
+
+---
+
