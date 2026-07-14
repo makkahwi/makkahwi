@@ -15,6 +15,7 @@ A summary of my coding activity for every week.
 - `HTML`: 53.0 B
 
 ---
+
 ### 2025-11-09 → 2025-11-15
 
 #### Top languages (public) this week
@@ -421,4 +422,3 @@ A summary of my coding activity for every week.
 - `SCSS`: 155.0 B
 
 ---
-
