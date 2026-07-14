@@ -62,17 +62,16 @@ jobs:
             for PAGE in $(seq 1 10); do
               RESP="$(gh api -H 'Accept: application/vnd.github+json' "${endpoint}?per_page=100&page=${PAGE}" 2>/dev/null || echo '[]')"
 
-              if ! echo "$RESP" | jq -e 'type == "array"' >/dev/null 2>&1; then
-                break
-              fi
-
-              PAGE_COUNT="$(echo "$RESP" | jq -r 'length')"
+              PAGE_COUNT="$(printf '%s' "$RESP" | jq -rs 'map(if type=="array" then length else 0 end) | add')"
+              PAGE_COUNT="${PAGE_COUNT:-0}"
+              PAGE_COUNT="$(echo "$PAGE_COUNT" | tr -dc '0-9')"
+              PAGE_COUNT="${PAGE_COUNT:-0}"
               [ "$PAGE_COUNT" -eq 0 ] && break
 
-              echo "$RESP" | jq -c '.[]' >> "$TMP_EVENTS"
+              echo "$RESP" | jq -c 'if type=="array" then .[] else empty end' >> "$TMP_EVENTS"
               got=$((got + PAGE_COUNT))
 
-              LAST_TS="$(echo "$RESP" | jq -r '.[-1].created_at // empty')"
+              LAST_TS="$(echo "$RESP" | jq -r 'if type=="array" then .[-1].created_at // empty else empty end')"
               [ -z "$LAST_TS" ] && break
               if [ "$(date -u -d "$LAST_TS" +%s)" -lt "$FROM_EPOCH" ]; then
                 break
