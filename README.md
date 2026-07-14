@@ -81,15 +81,15 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-07-14 15:32 UTC
+**Updated:** 2026-07-14 15:39 UTC
 
 **Window:** 2026-07-08 → 2026-07-14
 
 **Impact this week:**
 
-- Commits analyzed: 6
+- Commits analyzed: 7
 - Repos touched: 3
-- Line changes: +1811 / -314 (net +1497)
+- Line changes: +1971 / -318 (net +1653)
 
 **PR funnel this week:**
 
@@ -97,6 +97,20 @@ My work blends backend robustness with frontend clarity, powering education, non
 - Merged: 1
 - Closed: 1
 - Merge rate (opened->merged): 100%
+
+**Delivery and review:**
+
+- Median time to merge: 2m
+- Reviews submitted: 0
+- Review comments: 0
+
+**Work mix (opened PRs):**
+
+- Feature: 0
+- Fix: 0
+- Refactor: 0
+- Chore/CI/deps: 1
+- Other: 0
 
 **Top languages across public repos touched this week:**
 
