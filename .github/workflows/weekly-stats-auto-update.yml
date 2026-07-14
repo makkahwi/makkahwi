@@ -32,6 +32,8 @@ jobs:
           NOW_UTC="$(date -u +'%Y-%m-%d %H:%M UTC')"
           TO_DATE="$(date -u +%F)"
           FROM_DATE="$(date -u -d '6 days ago' +%F)"   # 7-day window inclusive
+          FROM_ISO_UTC="$(date -u -d "${FROM_DATE} 00:00:00" +%FT%TZ)"
+          TO_ISO_UTC="$(date -u -d "${TO_DATE} 23:59:59" +%FT%TZ)"
 
           # --------------------------
           # 1) Top Languages (public)
@@ -128,7 +130,133 @@ jobs:
           fi
 
           # --------------------------
-          # 3) Stats block
+          # 3) Delivery + review metrics
+          # --------------------------
+          human_minutes() {
+            local total_min="$1"
+            local h=$((total_min / 60))
+            local m=$((total_min % 60))
+            if [ "$h" -gt 0 ]; then
+              printf "%dh %02dm" "$h" "$m"
+            else
+              printf "%dm" "$m"
+            fi
+          }
+
+          TMP_MERGED_PRS="$(mktemp)"
+          > "$TMP_MERGED_PRS"
+          for PAGE in $(seq 1 10); do
+            RESP=$(gh api -H "Accept: application/vnd.github+json" \
+              "/search/issues?q=type:pr+author:${ACTOR}+is:merged+merged:${FROM_DATE}..${TO_DATE}&sort=updated&order=desc&per_page=100&page=${PAGE}" \
+              || echo '{}')
+            COUNT=$(echo "$RESP" | jq '.items|length // 0')
+            echo "$RESP" >> "$TMP_MERGED_PRS"
+            [ "$COUNT" -lt 100 ] && break
+          done
+
+          TMP_MERGE_MINS="$(mktemp)"
+          > "$TMP_MERGE_MINS"
+
+          jq -r '.items[]? | [(.repository_url | capture("/repos/(?<r>.*)$").r), .number] | @tsv' "$TMP_MERGED_PRS" \
+            | while IFS=$'\t' read -r FULL NUM; do
+                [ -z "${FULL:-}" ] && continue
+                [ -z "${NUM:-}" ] && continue
+
+                PR_RESP="$(gh api -H "Accept: application/vnd.github+json" "/repos/${FULL}/pulls/${NUM}" 2>/dev/null || echo '{}')"
+                CREATED="$(echo "$PR_RESP" | jq -r '.created_at // empty')"
+                MERGED="$(echo "$PR_RESP" | jq -r '.merged_at // empty')"
+
+                [ -z "$CREATED" ] && continue
+                [ -z "$MERGED" ] && continue
+
+                CREATED_E="$(date -u -d "$CREATED" +%s)"
+                MERGED_E="$(date -u -d "$MERGED" +%s)"
+                DIFF_MIN=$(( (MERGED_E - CREATED_E) / 60 ))
+                [ "$DIFF_MIN" -lt 0 ] && DIFF_MIN=0
+                echo "$DIFF_MIN" >> "$TMP_MERGE_MINS"
+              done
+
+          MERGE_SAMPLES="$(wc -l < "$TMP_MERGE_MINS" | tr -d ' ')"
+          if [ "$MERGE_SAMPLES" -gt 0 ]; then
+            TMP_MERGE_SORTED="$(mktemp)"
+            sort -n "$TMP_MERGE_MINS" > "$TMP_MERGE_SORTED"
+            MID=$(( MERGE_SAMPLES / 2 + 1 ))
+            if [ $((MERGE_SAMPLES % 2)) -eq 1 ]; then
+              MEDIAN_MIN="$(sed -n "${MID}p" "$TMP_MERGE_SORTED")"
+            else
+              A="$(sed -n "$((MID-1))p" "$TMP_MERGE_SORTED")"
+              B="$(sed -n "${MID}p" "$TMP_MERGE_SORTED")"
+              MEDIAN_MIN=$(( (A + B) / 2 ))
+            fi
+            MEDIAN_TTM="$(human_minutes "$MEDIAN_MIN")"
+          else
+            MEDIAN_TTM="n/a"
+          fi
+
+          FROM_EPOCH="$(date -u -d "$FROM_ISO_UTC" +%s)"
+          TO_EPOCH="$(date -u -d "$TO_ISO_UTC" +%s)"
+          TMP_EVENTS="$(mktemp)"
+          > "$TMP_EVENTS"
+          for PAGE in $(seq 1 10); do
+            RESP="$(gh api -H 'Accept: application/vnd.github+json' \
+              "/users/${ACTOR}/events?per_page=100&page=${PAGE}" || echo '[]')"
+            echo "$RESP" | jq -c '.[]' >> "$TMP_EVENTS"
+            LAST_TS="$(echo "$RESP" | jq -r '.[-1].created_at // empty')"
+            [ -z "$LAST_TS" ] && break
+            if [ "$(date -u -d "$LAST_TS" +%s)" -lt "$FROM_EPOCH" ]; then
+              break
+            fi
+          done
+
+          REVIEWS_SUBMITTED="$(jq -r --argjson FROM "$FROM_EPOCH" --argjson TO "$TO_EPOCH" '
+            select(.type == "PullRequestReviewEvent") |
+            (.created_at | fromdateiso8601) as $t |
+            select($t >= $FROM and $t <= $TO) |
+            1
+          ' "$TMP_EVENTS" | wc -l | tr -d ' ')"
+
+          REVIEW_COMMENTS="$(jq -r --argjson FROM "$FROM_EPOCH" --argjson TO "$TO_EPOCH" '
+            select(.type == "PullRequestReviewCommentEvent") |
+            (.created_at | fromdateiso8601) as $t |
+            select($t >= $FROM and $t <= $TO) |
+            1
+          ' "$TMP_EVENTS" | wc -l | tr -d ' ')"
+
+          TMP_OPENED_PRS="$(mktemp)"
+          > "$TMP_OPENED_PRS"
+          for PAGE in $(seq 1 10); do
+            RESP=$(gh api -H "Accept: application/vnd.github+json" \
+              "/search/issues?q=type:pr+author:${ACTOR}+created:${FROM_DATE}..${TO_DATE}&sort=created&order=desc&per_page=100&page=${PAGE}" \
+              || echo '{}')
+            COUNT=$(echo "$RESP" | jq '.items|length // 0')
+            echo "$RESP" >> "$TMP_OPENED_PRS"
+            [ "$COUNT" -lt 100 ] && break
+          done
+
+          MIX_COUNTS="$(jq -r '
+            .items[]? |
+            (([.labels[]?.name] | join(" ") + " " + (.title // "")) | ascii_downcase) as $s |
+            if ($s | test("(^|[^a-z])(feat|feature)([^a-z]|$)")) then "feature"
+            elif ($s | test("(^|[^a-z])(fix|bug|hotfix|patch)([^a-z]|$)")) then "fix"
+            elif ($s | test("refactor|cleanup|clean up")) then "refactor"
+            elif ($s | test("(^|[^a-z])(chore|build|ci|deps|dependency|bump|release)([^a-z]|$)")) then "chore"
+            else "other" end
+          ' "$TMP_OPENED_PRS" | sort | uniq -c)"
+
+          FEATURE_COUNT="$(echo "$MIX_COUNTS" | awk '$2=="feature" {print $1}')"
+          FIX_COUNT="$(echo "$MIX_COUNTS" | awk '$2=="fix" {print $1}')"
+          REFACTOR_COUNT="$(echo "$MIX_COUNTS" | awk '$2=="refactor" {print $1}')"
+          CHORE_COUNT="$(echo "$MIX_COUNTS" | awk '$2=="chore" {print $1}')"
+          OTHER_COUNT="$(echo "$MIX_COUNTS" | awk '$2=="other" {print $1}')"
+
+          FEATURE_COUNT="${FEATURE_COUNT:-0}"
+          FIX_COUNT="${FIX_COUNT:-0}"
+          REFACTOR_COUNT="${REFACTOR_COUNT:-0}"
+          CHORE_COUNT="${CHORE_COUNT:-0}"
+          OTHER_COUNT="${OTHER_COUNT:-0}"
+
+          # --------------------------
+          # 4) Stats block
           # --------------------------
           {
             echo "**Updated:** ${NOW_UTC}"
@@ -148,6 +276,20 @@ jobs:
             echo "- Closed: ${PR_CLOSED}"
             echo "- Merge rate (opened->merged): ${MERGE_RATE}%"
             echo
+            echo "**Delivery and review:**"
+            echo
+            echo "- Median time to merge: ${MEDIAN_TTM}"
+            echo "- Reviews submitted: ${REVIEWS_SUBMITTED}"
+            echo "- Review comments: ${REVIEW_COMMENTS}"
+            echo
+            echo "**Work mix (opened PRs):**"
+            echo
+            echo "- Feature: ${FEATURE_COUNT}"
+            echo "- Fix: ${FIX_COUNT}"
+            echo "- Refactor: ${REFACTOR_COUNT}"
+            echo "- Chore/CI/deps: ${CHORE_COUNT}"
+            echo "- Other: ${OTHER_COUNT}"
+            echo
             if [ -n "$TOP_LANG_MD" ]; then
               echo "**Top languages across public repos touched this week:**"
               echo
@@ -160,14 +302,14 @@ jobs:
           } > _stats.md
 
           # --------------------------
-          # 4) Recent PRs (unchanged)
+          # 5) Recent PRs (unchanged)
           # --------------------------
           gh api '/search/issues?q=type:pr+author:'"${ACTOR}"'&per_page=8' \
             | jq -r '.items[] | "* [\(.title)](\(.html_url)) in **\(.repository_url | capture("/repos/(?<r>.*)$").r)** — \(.state)"' \
             > _recent.md || true
 
           # --------------------------
-          # 5) Inject into README.md
+          # 6) Inject into README.md
           # --------------------------
           awk '
             BEGIN{ s=0 }
@@ -184,7 +326,7 @@ jobs:
           ' README.md > README.md.new && mv README.md.new README.md
 
           # --------------------------
-          # 6) Append to WeeklyTracker.md (archive)
+          # 7) Append to WeeklyTracker.md (archive)
           # --------------------------
           {
             echo "### ${FROM_DATE} → ${TO_DATE}"
@@ -201,6 +343,20 @@ jobs:
             echo "- Merged: ${PR_MERGED}"
             echo "- Closed: ${PR_CLOSED}"
             echo "- Merge rate (opened->merged): ${MERGE_RATE}%"
+            echo
+            echo "#### Delivery and review"
+            echo
+            echo "- Median time to merge: ${MEDIAN_TTM}"
+            echo "- Reviews submitted: ${REVIEWS_SUBMITTED}"
+            echo "- Review comments: ${REVIEW_COMMENTS}"
+            echo
+            echo "#### Work mix (opened PRs)"
+            echo
+            echo "- Feature: ${FEATURE_COUNT}"
+            echo "- Fix: ${FIX_COUNT}"
+            echo "- Refactor: ${REFACTOR_COUNT}"
+            echo "- Chore/CI/deps: ${CHORE_COUNT}"
+            echo "- Other: ${OTHER_COUNT}"
             echo
             if [ -n "$TOP_LANG_MD" ]; then
               echo "#### Top languages (public) this week"
