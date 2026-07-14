@@ -48,24 +48,8 @@ jobs:
           echo "UTC window: ${FROM_ISO_UTC} .. ${TO_ISO_UTC}"
           echo "========================================="
 
-          # ----- Collect events (public + private visible to token) -----
-          TMP_EVENTS="$(mktemp)"; > "$TMP_EVENTS"
-          for PAGE in $(seq 1 10); do
-            RESP="$(gh api -H 'Accept: application/vnd.github+json' \
-              "/users/${ACTOR}/events?per_page=100&page=${PAGE}" || echo '[]')"
-            echo "$RESP" | jq -c '.[]' >> "$TMP_EVENTS"
-            # Stop if the oldest event on this page is before the window
-            LAST_TS="$(echo "$RESP" | jq -r '.[-1].created_at // empty')"
-            [ -z "$LAST_TS" ] && break
-            if [ "$(date -u -d "$LAST_TS" +%s)" -lt "$(date -u -d "$FROM_ISO_UTC" +%s)" ]; then
-              break
-            fi
-          done
-
-          echo "Total events fetched: $(wc -l < "$TMP_EVENTS")"
-
-          # ----- Extract commit timestamps from PushEvents that fall inside the local-day window -----
-          # Use commit timestamps from payload.commits[].timestamp (ISO with tz)
+          # ----- Collect commit timestamps via search/commits -----
+          # Using commit search is more reliable than PushEvent payload fields.
           TMP_COMMITS="$(mktemp)"; > "$TMP_COMMITS"
 
           FROM_EPOCH="$(date -u -d "$FROM_ISO_UTC" +%s)"
@@ -73,25 +57,21 @@ jobs:
 
           echo "FROM_EPOCH: ${FROM_EPOCH}, TO_EPOCH: ${TO_EPOCH}"
 
-          # Debug: Check PushEvents
-          PUSH_COUNT=$(jq -r 'select(.type == "PushEvent")' "$TMP_EVENTS" | wc -l)
-          echo "PushEvents found: ${PUSH_COUNT}"
+          for PAGE in $(seq 1 10); do
+            RESP="$(gh api -H 'Accept: application/vnd.github+json' \
+              "/search/commits?q=author:${ACTOR}+committer-date:${FROM_ISO_UTC}..${TO_ISO_UTC}&sort=committer-date&order=desc&per_page=100&page=${PAGE}" \
+              || echo '{}')"
 
-          # Debug: Show a sample PushEvent
-          echo "Sample PushEvent:"
-          jq -r 'select(.type == "PushEvent") | {created_at, commits: .payload.commits | length}' "$TMP_EVENTS" | head -5
+            COUNT="$(echo "$RESP" | jq -r '.items|length // 0')"
 
-          jq -r --arg FROM_EPOCH "$FROM_EPOCH" --arg TO_EPOCH "$TO_EPOCH" '
-            select(.type == "PushEvent") |
-            .payload.commits[]? |
-            .timestamp as $ts |
-            # Convert ISO timestamp to epoch for proper numeric comparison
-            ($ts | fromdateiso8601) as $epoch |
-            select($epoch >= ($FROM_EPOCH | tonumber) and $epoch <= ($TO_EPOCH | tonumber)) |
-            .timestamp
-          ' "$TMP_EVENTS" >> "$TMP_COMMITS"
+            echo "$RESP" \
+              | jq -r '.items[]?.commit?.committer?.date // empty' \
+              | awk 'NF > 0' >> "$TMP_COMMITS"
 
-          echo "Commits in time range: $(wc -l < "$TMP_COMMITS")"
+            [ "$COUNT" -lt 100 ] && break
+          done
+
+          echo "Commit timestamps fetched: $(wc -l < "$TMP_COMMITS")"
 
           # If desired, also count PR open/merge times as "activity anchors" (optional):
           # TMP_PRS="$(mktemp)"; > "$TMP_PRS"
