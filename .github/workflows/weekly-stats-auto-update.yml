@@ -235,7 +235,8 @@ jobs:
 
           MIX_COUNTS="$(jq -r '
             .items[]? |
-            (([.labels[]?.name] | join(" ") + " " + (.title // "")) | ascii_downcase) as $s |
+            ((.labels // []) | map(.name // "") | join(" ")) as $labels |
+            (($labels + " " + (.title // "")) | ascii_downcase) as $s |
             if ($s | test("(^|[^a-z])(feat|feature)([^a-z]|$)")) then "feature"
             elif ($s | test("(^|[^a-z])(fix|bug|hotfix|patch)([^a-z]|$)")) then "fix"
             elif ($s | test("refactor|cleanup|clean up")) then "refactor"
