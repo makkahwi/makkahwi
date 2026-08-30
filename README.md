@@ -81,43 +81,43 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-08-22 23:46 UTC
+**Updated:** 2026-08-30 01:31 UTC
 
-**Window:** 2026-08-16 → 2026-08-22
+**Window:** 2026-08-24 → 2026-08-30
 
 **Impact this week:**
 
-- Commits analyzed: 2
+- Commits analyzed: 10
 - Repos touched: 1
-- Line changes: +661 / -224 (net +437)
+- Line changes: +3419 / -1026 (net +2393)
 
 **PR funnel this week:**
 
-- Opened: 0
-- Merged: 0
-- Closed: 0
-- Merge rate (opened->merged): 0%
+- Opened: 2
+- Merged: 1
+- Closed: 1
+- Merge rate (opened->merged): 50%
 
 **Delivery and review:**
 
-- Median time to merge: n/a
+- Median time to merge: 0m
 - Reviews submitted: 0
 - Review comments: 0
 
 **Work mix (opened PRs):**
 
-- Feature: 0
+- Feature: 1
 - Fix: 0
 - Refactor: 0
 - Chore/CI/deps: 0
-- Other: 0
+- Other: 1
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 49.8 KB
-- `CSS`: 7.4 KB
-- `SCSS`: 561.0 B
-- `JavaScript`: 279.0 B
+- `TypeScript`: 102.1 KB
+- `CSS`: 47.7 KB
+- `JavaScript`: 610.0 B
+- `HTML`: 365.0 B
 
 <!-- STATS:END -->
 
@@ -126,14 +126,14 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [Dev](https://github.com/makkahwi/personal-3d-website/pull/7) in **makkahwi/personal-3d-website** — closed
+* [feat(common): personal website link note](https://github.com/makkahwi/development-resume/pull/55) in **makkahwi/development-resume** — open
+* [Launch Initial / Temp FullData UI](https://github.com/makkahwi/personal-3d-website/pull/6) in **makkahwi/personal-3d-website** — closed
 * [Build: Initial Schedule AI Generator Model](https://github.com/makkahwi/heal-tracker/pull/115) in **makkahwi/heal-tracker** — closed
 * [Fix: Minor UI & Code Issues](https://github.com/makkahwi/development-resume/pull/54) in **makkahwi/development-resume** — closed
 * [Fix: You Env Vars](https://github.com/makkahwi/development-resume/pull/53) in **makkahwi/development-resume** — closed
 * [Build: Chatbot UI](https://github.com/makkahwi/development-resume/pull/52) in **makkahwi/development-resume** — closed
 * [Fix: ToDo Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/22) in **baseflow-labs/initia-frontend-template** — closed
-* [Build: Page Builder New UI/UX](https://github.com/baseflow-labs/initia-frontend-template/pull/21) in **baseflow-labs/initia-frontend-template** — closed
-* [Build: Initial Docs App](https://github.com/baseflow-labs/initia-frontend-template/pull/20) in **baseflow-labs/initia-frontend-template** — closed
-* [Turn App To Monorepo](https://github.com/baseflow-labs/initia-frontend-template/pull/19) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---
