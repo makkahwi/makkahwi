@@ -81,41 +81,41 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-08-30 01:31 UTC
+**Updated:** 2026-09-06 01:15 UTC
 
-**Window:** 2026-08-24 → 2026-08-30
+**Window:** 2026-08-31 → 2026-09-06
 
 **Impact this week:**
 
-- Commits analyzed: 10
+- Commits analyzed: 1
 - Repos touched: 1
-- Line changes: +3419 / -1026 (net +2393)
+- Line changes: +99 / -22 (net +77)
 
 **PR funnel this week:**
 
-- Opened: 2
-- Merged: 1
-- Closed: 1
-- Merge rate (opened->merged): 50%
+- Opened: 0
+- Merged: 0
+- Closed: 0
+- Merge rate (opened->merged): 0%
 
 **Delivery and review:**
 
-- Median time to merge: 0m
+- Median time to merge: n/a
 - Reviews submitted: 0
 - Review comments: 0
 
 **Work mix (opened PRs):**
 
-- Feature: 1
+- Feature: 0
 - Fix: 0
 - Refactor: 0
 - Chore/CI/deps: 0
-- Other: 1
+- Other: 0
 
 **Top languages across public repos touched this week:**
 
-- `TypeScript`: 102.1 KB
-- `CSS`: 47.7 KB
+- `TypeScript`: 104.2 KB
+- `CSS`: 47.8 KB
 - `JavaScript`: 610.0 B
 - `HTML`: 365.0 B
 
