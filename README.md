@@ -81,9 +81,9 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-11-01 02:28 UTC
+**Updated:** 2026-11-08 02:38 UTC
 
-**Window:** 2026-10-26 → 2026-11-01
+**Window:** 2026-11-02 → 2026-11-08
 
 **Impact this week:**
 
@@ -93,7 +93,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 
 **PR funnel this week:**
 
-- Opened: 0
+- Opened: 1
 - Merged: 0
 - Closed: 0
 - Merge rate (opened->merged): 0%
@@ -109,7 +109,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 - Feature: 0
 - Fix: 0
 - Refactor: 0
-- Chore/CI/deps: 0
+- Chore/CI/deps: 1
 - Other: 0
 
 **Top languages across public repos touched this week:**
@@ -123,6 +123,7 @@ My work blends backend robustness with frontend clarity, powering education, non
 ### 🏆 Recent Contributions
 
 <!-- RECENT:START -->
+* [build(scheduler): ai generator flow updates](https://github.com/makkahwi/heal-tracker/pull/116) in **makkahwi/heal-tracker** — open
 * [Dev](https://github.com/makkahwi/personal-3d-website/pull/7) in **makkahwi/personal-3d-website** — closed
 * [feat(common): personal website link note](https://github.com/makkahwi/development-resume/pull/55) in **makkahwi/development-resume** — open
 * [Launch Initial / Temp FullData UI](https://github.com/makkahwi/personal-3d-website/pull/6) in **makkahwi/personal-3d-website** — closed
@@ -130,7 +131,6 @@ My work blends backend robustness with frontend clarity, powering education, non
 * [Fix: Minor UI & Code Issues](https://github.com/makkahwi/development-resume/pull/54) in **makkahwi/development-resume** — closed
 * [Fix: You Env Vars](https://github.com/makkahwi/development-resume/pull/53) in **makkahwi/development-resume** — closed
 * [Build: Chatbot UI](https://github.com/makkahwi/development-resume/pull/52) in **makkahwi/development-resume** — closed
-* [Fix: ToDo Issues](https://github.com/baseflow-labs/initia-frontend-template/pull/22) in **baseflow-labs/initia-frontend-template** — closed
 <!-- RECENT:END -->
 
 ---
