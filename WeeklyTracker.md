@@ -1077,3 +1077,41 @@ A summary of my coding activity for every week.
 
 ---
 
+### 2026-11-16 → 2026-11-22
+
+#### Impact
+
+- Commits analyzed: 5
+- Repos touched: 1
+- Line changes: +48274 / -2060 (net +46214)
+
+#### PR funnel
+
+- Opened: 0
+- Merged: 0
+- Closed: 0
+- Merge rate (opened->merged): 0%
+
+#### Delivery and review
+
+- Median time to merge: n/a
+- Reviews submitted: 0
+- Review comments: 0
+
+#### Work mix (opened PRs)
+
+- Feature: 0
+- Fix: 0
+- Refactor: 0
+- Chore/CI/deps: 0
+- Other: 0
+
+#### Top languages (public) this week
+
+- `JavaScript`: 1.3 MB
+- `Batchfile`: 29.5 KB
+- `Shell`: 26.8 KB
+- `HTML`: 922.0 B
+
+---
+

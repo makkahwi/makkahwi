@@ -81,15 +81,15 @@ My work blends backend robustness with frontend clarity, powering education, non
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=makkahwi&layout=compact&theme=react&hide_border=true)
 
 <!-- STATS:START -->
-**Updated:** 2026-11-15 02:58 UTC
+**Updated:** 2026-11-22 03:22 UTC
 
-**Window:** 2026-11-09 → 2026-11-15
+**Window:** 2026-11-16 → 2026-11-22
 
 **Impact this week:**
 
-- Commits analyzed: 0
-- Repos touched: 0
-- Line changes: +0 / -0 (net 0)
+- Commits analyzed: 5
+- Repos touched: 1
+- Line changes: +48274 / -2060 (net +46214)
 
 **PR funnel this week:**
 
@@ -114,7 +114,10 @@ My work blends backend robustness with frontend clarity, powering education, non
 
 **Top languages across public repos touched this week:**
 
-- ``: 0.0 B
+- `JavaScript`: 1.3 MB
+- `Batchfile`: 29.5 KB
+- `Shell`: 26.8 KB
+- `HTML`: 922.0 B
 
 <!-- STATS:END -->
 
